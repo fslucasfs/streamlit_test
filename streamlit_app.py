@@ -108,7 +108,7 @@ def main():
     df = load_and_clean_data()
 
     st.subheader("Informações Gerais do Dataset")
-    st.write(f"O dataset possui {df.shape[0]} filmes e {df.shape[1]} colunas.")
+    st.write(f"O dataset possui {df.shape[0]} filmes")
     st.subheader("Exemplos de filmes")
     n_filmes = 8
     df_filmes = df.head(n_filmes)
