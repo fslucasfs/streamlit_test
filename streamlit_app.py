@@ -109,8 +109,11 @@ def main():
 
     st.subheader("Informações Gerais do Dataset")
     st.write(f"O dataset possui {df.shape[0]} filmes e {df.shape[1]} colunas.")
-    st.write("Primeiras 4 linhas do dataset:")
-    st.write(df.head())
+    n_filmes = 10
+    df_filmes = df.head(n_filmes)
+
+    for i, row in df_filmes.iterrows():
+        st.image(row['Poster_Link'], caption=row['Series_Title'], use_column_width=True)
 
     # Seção para análise por ano
     st.subheader("Análise por Ano")
