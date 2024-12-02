@@ -110,15 +110,15 @@ def main():
     st.subheader("Informações Gerais do Dataset")
     st.write(f"O dataset possui {df.shape[0]} filmes e {df.shape[1]} colunas.")
     st.subheader("Exemplos de filmes")
-    n_filmes = 12
+    n_filmes = 30
     df_filmes = df.head(n_filmes)
 
     # Exibindo os filmes em 4 colunas
-    colunas = st.columns(4)  # Cria 4 colunas
+    colunas = st.columns(8)  # Cria 4 colunas
 
     # Iterando pelos filmes e colocando nas colunas
     for i, row in df_filmes.iterrows():
-        coluna = colunas[i % 4]  # Ciclando pelas 4 colunas
+        coluna = colunas[i % 8]  # Ciclando pelas 4 colunas
         with coluna:
             st.image(row['Poster_Link'], caption=row['Series_Title'], use_column_width=True)
             st.write("")
