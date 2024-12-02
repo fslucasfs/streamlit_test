@@ -109,7 +109,8 @@ def main():
 
     st.subheader("Informações Gerais do Dataset")
     st.write(f"O dataset possui {df.shape[0]} filmes e {df.shape[1]} colunas.")
-    n_filmes = 12  # Número total de filmes a exibir
+    st.subheader("Exemplos de filmes")
+    n_filmes = 12
     df_filmes = df.head(n_filmes)
 
     # Exibindo os filmes em 4 colunas
